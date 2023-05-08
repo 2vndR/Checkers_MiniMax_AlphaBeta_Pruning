@@ -32,7 +32,7 @@ def main():
         if game.turn == WHITE:
             alpha = float('-inf')
             beta = float('inf')
-            value, new_board = minimax_alpha_beta(game.get_board(), 3, alpha, beta, WHITE, game)
+            value, new_board = minimax_alpha_beta(game.get_board(), depth, alpha, beta, WHITE, game)
             game.ai_move(new_board)
         
         if game.winner() != None:
